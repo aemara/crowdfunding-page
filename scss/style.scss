@@ -1,0 +1,294 @@
+/**************
+RESET
+**************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/**************
+LAYOUT
+**************/
+
+body {
+  background: #fafafa;
+  display: grid;
+  grid-template-rows: 300px auto;
+  font-family: "Commissioner", sans-serif;
+}
+
+.computer-bg {
+  background: url("/images/image-hero-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-row: 1/2;
+  grid-column: 1/-1;
+}
+
+.main-container {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  width: 87%;
+  margin: 0 auto;
+}
+
+/**************
+HEADER
+**************/
+
+header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 1.5em;
+  margin-bottom: 11em;
+  ul {
+    display: none;
+  }
+}
+
+/**************
+INFO SECTION
+**************/
+
+.info-section {
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1.5em 3em 1.5em;
+  outline: 1px solid rgba(0, 0, 0, 0.05);
+  outline-offset: -1px;
+  margin-bottom: 2em;
+
+  .logo-mastercraft {
+    margin-top: -1.8em;
+    margin-bottom: 1.5em;
+  }
+
+  .product-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.9em;
+  }
+
+  .product-brief-description {
+    font-size: 0.875rem;
+    color: #7a7a7a;
+    margin-bottom: 1.5em;
+  }
+
+  .info-section-btns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .back-btn {
+      border: none;
+      background: #3cb3ab;
+      font-weight: 700;
+      color: #ffffff;
+      border-radius: 33.5px;
+      padding: 0.7em 2em;
+      flex-basis: 77%;
+      transition: all 0.2s;
+    }
+
+    .back-btn:hover {
+      cursor: pointer;
+      background: #147a73;
+    }
+
+    .back-btn:focus {
+      background: #147a73;
+    }
+
+    .bookmark-btn {
+      border: none;
+      background: none;
+      width: 56px;
+      height: 56px;
+    }
+
+    .bookmark-btn:focus circle {
+      fill: #707070;
+    }
+  }
+}
+
+/**************
+PROGRESS SECTION
+**************/
+
+.progress-section {
+  background: #ffffff;
+  border-radius: 8px;
+  outline: 1px solid rgba(0, 0, 0, 0.05);
+  outline-offset: -1px;
+  text-align: center;
+  padding: 2em 0;
+  margin-bottom: 2em;
+
+  .total-money-backed,
+  .total-backers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.3em;
+  }
+
+  .total-money,
+  .number-of-backers,
+  .number-days-left {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  .target-amount,
+  .total-backers-text,
+  .days-left-text {
+    font-size: 0.875rem;
+    color: #7a7a7a;
+  }
+
+  .divider {
+    width: 80px;
+    height: 1px;
+    opacity: 0.15;
+    background: #000000;
+    margin-top: 1.3em;
+  }
+}
+
+/**************
+PLEDGES SECTION
+**************/
+
+.pledges-section {
+  padding: 2em 1.5em;
+  background: #ffffff;
+  border-radius: 8px;
+  outline: 1px solid rgba(0, 0, 0, 0.05);
+  outline-offset: -1px;
+  margin-bottom: 2em;
+
+  .about-project {
+    margin-bottom: 1.5em;
+
+    .about-project-title {
+      font-size: 1.125rem;
+      margin-bottom: 1em;
+    }
+
+    .about-project-paragraph {
+      font-size: 0.875rem;
+      color: #7a7a7a;
+    }
+  }
+
+  .pledge {
+    border-radius: 8px;
+    outline: 1px solid rgba(0, 0, 0, 0.15);
+    outline-offset: -1px;
+    padding: 1.5em;
+    margin-bottom: 1.8em;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    .pledge-name {
+      font-weight: 700;
+      font-size: 0.875rem;
+    }
+
+    .pledge-amount {
+      color: #3cb3ab;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .pledge-perks {
+      margin-top: 2em;
+      margin-bottom: 1.5em;
+      font-size: 0.875rem;
+      color: #7a7a7a;
+      line-height: 24px;
+      text-justify: newspaper;
+    }
+
+    .number-of-pledges-left {
+      font-size: 0.9rem;
+      color: #7a7a7a;
+      margin-bottom: 1em;
+
+      .number {
+        font-size: 2rem;
+        color: #000000;
+        font-weight: 700;
+      }
+    }
+
+    .select-pledge-btn {
+      border: none;
+      background: #3cb3ab;
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: #ffffff;
+      border-radius: 33.5px;
+      padding: 1em 2em;
+      text-transform: capitalize;
+      transition: all 0.2s;
+    }
+
+    .select-pledge-btn:hover {
+      cursor: pointer;
+      background: #147a73;
+    }
+
+    .select-pledge-btn:focus {
+      background: #147a73;
+    }
+  }
+}
