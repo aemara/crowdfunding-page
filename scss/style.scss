@@ -45,6 +45,16 @@ select {
   font: inherit;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 /**************
 LAYOUT
 **************/
@@ -75,14 +85,21 @@ body {
 HEADER
 **************/
 
-header {
+.page-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
   margin-top: 1.5em;
   margin-bottom: 11em;
-  ul {
+
+  nav {
+    width: 100%;
     display: none;
+  }
+  ul {
+    list-style: none;
+    background: white;
   }
 }
 
@@ -289,6 +306,187 @@ PLEDGES SECTION
 
     .select-pledge-btn:focus {
       background: #147a73;
+    }
+  }
+}
+
+/**************
+MODAL
+**************/
+.modal {
+  grid-column: 1/2;
+  grid-row: 1/-1;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: visible;
+  z-index: 1000;
+
+  .modal-content {
+    background-color: white;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    width: 327px;
+    margin-top: 121px;
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1em;
+
+      .modal-title {
+        font-size: 1.125rem;
+        font-weight: 700;
+      }
+    }
+
+    .modal-question {
+      font-size: 0.875rem;
+      color: #7a7a7a;
+      line-height: 24px;
+      text-justify: newspaper;
+      margin-bottom: 2em;
+    }
+
+    .pledge {
+      border-radius: 8px;
+      outline: 1px solid rgba(0, 0, 0, 0.15);
+      outline-offset: -1px;
+      padding: 1.5em;
+      margin-bottom: 1.8em;
+      cursor: pointer;
+
+      .pledge-header {
+        display: flex;
+        gap: 1em;
+        align-items: center;
+
+        .pledge-name-and-amount {
+          order: 2;
+        }
+
+        .radio-button {
+          width: 24px;
+          height: 24px;
+          border: 1px solid rgba(0, 0, 0, 0.15);
+          border-radius: 50%;
+          order: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .selected-radio {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background: #3cb3ab;
+        }
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+
+      .pledge-name {
+        font-weight: 700;
+        font-size: 0.875rem;
+      }
+
+      .pledge-amount {
+        color: #3cb3ab;
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+
+      .pledge-perks {
+        margin-top: 2em;
+        margin-bottom: 1.5em;
+        font-size: 0.875rem;
+        color: #7a7a7a;
+        line-height: 24px;
+        text-justify: newspaper;
+      }
+
+      .number-of-pledges-left {
+        font-size: 0.9rem;
+        color: #7a7a7a;
+        margin-bottom: 1em;
+
+        .number {
+          font-size: 1.125rem;
+          color: #000000;
+          font-weight: 700;
+          margin-right: 0.2em;
+        }
+      }
+
+      .enter-pledge {
+        border-top: 1px solid rgba(0, 0, 0, 0.15);
+        text-align: center;
+        padding-top: 1.5em;
+
+        .enter-your-pledge {
+          font-size: 0.875rem;
+          color: #7a7a7a;
+        }
+
+        .form-and-button {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 1em;
+        }
+
+        .money-form {
+          width: 45%;
+          display: flex;
+          align-items: center;
+          gap: 0.5em;
+          border: 1px solid rgba(0, 0, 0, 0.15);
+          border-radius: 33.5px;
+
+          .pledge-input {
+            width: 100%;
+            border: none;
+            width: 50%;
+            font-weight: 700;
+            font-size: 0.875rem;
+          }
+
+          .pledge-input:focus {
+            outline: none;
+          }
+
+          .dollar-sign {
+            font-size: 0.875rem;
+            font-weight: 700;
+            opacity: 15%;
+            margin-left: 1.5em;
+          }
+        }
+
+        .continue-btn {
+          border: none;
+          background: #3cb3ab;
+          font-size: 0.875rem;
+          font-weight: 700;
+          color: #ffffff;
+          border-radius: 33.5px;
+          padding: 1em 0;
+          width: 50%;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+
+        .continue-btn:hover {
+          cursor: pointer;
+          background: #147a73;
+        }
+
+        .continue-btn:focus {
+          background: #147a73;
+        }
+      }
     }
   }
 }
