@@ -352,9 +352,13 @@ MODAL
       border-radius: 8px;
       outline: 1px solid rgba(0, 0, 0, 0.15);
       outline-offset: -1px;
-      padding: 1.5em;
+      padding: 1.5em 0;
       margin-bottom: 1.8em;
       cursor: pointer;
+
+      .pledge-container {
+        padding: 0 1.5em;
+      }
 
       .pledge-header {
         display: flex;
@@ -487,6 +491,51 @@ MODAL
           background: #147a73;
         }
       }
+    }
+  }
+}
+
+/**************
+THANKS MODAL
+**************/
+
+.thanks-modal {
+  .modal-content {
+    text-align: center;
+    padding: 2em 1.5em;
+
+    .thanks-modal-title {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      font-size: 1.125rem;
+    }
+
+    .thanks-modal-message {
+      font-size: 0.875rem;
+      line-height: 24px;
+      color: #7a7a7a;
+      margin-bottom: 2em;
+    }
+
+    .got-it-btn {
+      border: none;
+      background: #3cb3ab;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #ffffff;
+      border-radius: 33.5px;
+      padding: 1em 2.5em;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .got-it-btn:hover {
+      cursor: pointer;
+      background: #147a73;
+    }
+
+    .got-it-btn:focus {
+      background: #147a73;
     }
   }
 }
