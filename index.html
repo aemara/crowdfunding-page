@@ -33,9 +33,20 @@
   </head>
   <body>
     <div class="computer-bg"></div>
+    <div class="top-gradient-bg"></div>
 
-    <div class="main-container">
-      <header class="page-header">
+    <div class="mobile-nav" role="navigation" display: block">
+      <nav class="mobile-nav-content">
+        <ul>
+          <li>about</li>
+          <li>discover</li>
+          <li>get started</li>
+        </ul>
+      </nav>
+    </div>
+
+    <header class="page-header">
+      <div class="center-container">
         <img class="logo" src="images/logo.svg" />
         <svg
           class="mobile-menu-icon"
@@ -47,15 +58,11 @@
             <path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" />
           </g>
         </svg>
-        <nav>
-          <ul>
-            <li>about</li>
-            <li>discover</li>
-            <li>get started</li>
-          </ul>
-        </nav>
-      </header>
-      <main>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="center-container">
         <section class="info-section">
           <img class="logo-mastercraft" src="images/logo-mastercraft.svg" />
           <p class="product-name">Mastercraft Bamboo Monitor Riser</p>
@@ -160,8 +167,8 @@
             </div>
           </div>
         </section>
-      </main>
-    </div>
+      </div>
+    </main>
 
     <div class="modal" style="display: none">
       <div class="modal-content">

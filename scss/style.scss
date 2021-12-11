@@ -66,6 +66,16 @@ body {
   font-family: "Commissioner", sans-serif;
 }
 
+.top-gradient-bg {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
 .computer-bg {
   background: url("/images/image-hero-mobile.jpg");
   background-size: cover;
@@ -74,11 +84,15 @@ body {
   grid-column: 1/-1;
 }
 
-.main-container {
-  grid-row: 1/-1;
-  grid-column: 1/-1;
+.center-container {
   width: 87%;
   margin: 0 auto;
+}
+
+.main-content {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  margin-top: 250px;
 }
 
 /**************
@@ -86,20 +100,62 @@ HEADER
 **************/
 
 .page-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
+  grid-row: 1/-1;
+  grid-column: 1/-1;
   margin-top: 1.5em;
   margin-bottom: 11em;
+  z-index: 1000;
 
-  nav {
-    width: 100%;
-    display: none;
+  .center-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
   }
+}
+
+/**************
+MOBILE NAV
+**************/
+
+.mobile-nav {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  z-index: 100;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.mobile-nav-content {
+  background: #ffffff;
+  grid-column: 1/-1;
+  grid-row: 1/1;
+  height: min-content;
+  width: 87%;
+  margin: 88px auto 0 auto;
+  z-index: 100;
+  border-radius: 8px;
+  outline: 1px solid rgba(0, 0, 0, 0.05);
+  outline-offset: -1px;
+
   ul {
     list-style: none;
-    background: white;
+    margin: 0;
+    padding: 0;
+
+    li {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 1em 0 1em 2em;
+      font-size: 1.125rem;
+      text-transform: capitalize;
+      font-weight: 500;
+      &:last-child {
+        border: none;
+      }
+    }
   }
 }
 
