@@ -102,10 +102,10 @@ HEADER
 
 .page-header {
   grid-row: 1/-1;
+  height: min-content;
   grid-column: 1/-1;
   margin-top: 1.5em;
-  margin-bottom: 11em;
-  z-index: 1000;
+  z-index: 1001;
 
   .center-container {
     display: flex;
@@ -133,11 +133,11 @@ MOBILE NAV
 .mobile-nav-content {
   background: #ffffff;
   grid-column: 1/-1;
-  grid-row: 1/1;
+  grid-row: 1/2;
   height: min-content;
   width: 87%;
   margin: 88px auto 0 auto;
-  z-index: 100;
+  z-index: 1001;
   border-radius: 8px;
   outline: 1px solid rgba(0, 0, 0, 0.05);
   outline-offset: -1px;
@@ -395,6 +395,10 @@ MODAL
         font-size: 1.125rem;
         font-weight: 700;
       }
+
+      .close-modal-icon:hover {
+        cursor: pointer;
+      }
     }
 
     .modal-question {
@@ -505,6 +509,7 @@ MODAL
           gap: 0.5em;
           border: 1px solid rgba(0, 0, 0, 0.15);
           border-radius: 33.5px;
+          cursor: pointer;
 
           .pledge-input {
             width: 100%;
@@ -512,6 +517,7 @@ MODAL
             width: 50%;
             font-weight: 700;
             font-size: 0.875rem;
+            cursor: pointer;
           }
 
           .pledge-input:focus {
@@ -548,6 +554,20 @@ MODAL
           background: #147a73;
         }
       }
+
+      .animation-target {
+        animation: animation 0.2s linear 1 both;
+      }
+    }
+
+    .selected-pledge-border {
+      outline: 2px solid #3cb3ab;
+      outline-offset: -2px;
+    }
+
+    .input-pledge-border {
+      outline: 1px solid #3cb3ab;
+      outline-offset: -1px;
     }
   }
 }
@@ -594,5 +614,19 @@ THANKS MODAL
     .got-it-btn:focus {
       background: #147a73;
     }
+  }
+}
+
+/*********
+ANIMATION
+***********/
+
+@keyframes animation {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }

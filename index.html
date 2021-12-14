@@ -182,7 +182,7 @@
       </div>
     </main>
 
-    <div class="modal" style="display: none">
+    <div class="modal pledge-modal" style="display: none">
       <div class="modal-content">
         <header class="modal-header">
           <h2 class="modal-title">Back this project</h2>
@@ -211,7 +211,9 @@
                 <div class="pledge-name-and-amount">
                   <p class="pledge-name">Pledge with no reward</p>
                 </div>
-                <div class="radio-button" role="radio"></div>
+                <div class="radio-button" role="radio">
+                  <div class="selected-radio" style="display: none"></div>
+                </div>
               </header>
               <p class="pledge-perks">
                 Choose to support us without a reward if you simply believe in
@@ -227,7 +229,9 @@
                   <p class="pledge-name">Bamboo Stand</p>
                   <p class="pledge-amount">Pledge $25 or more</p>
                 </div>
-                <div class="radio-button" role="radio"></div>
+                <div class="radio-button" role="radio">
+                  <div class="selected-radio" style="display: none"></div>
+                </div>
               </header>
               <p class="pledge-perks">
                 You get an ergonomic stand made of natural bamboo. You've helped
@@ -239,7 +243,7 @@
               </p>
             </div>
 
-            <div class="enter-pledge">
+            <div class="enter-pledge animation-target" style="display: none">
               <div class="pledge-container">
                 <p class="enter-your-pledge">Enter your pledge</p>
                 <div class="form-and-button">
@@ -259,7 +263,9 @@
                   <p class="pledge-name">Black Edition Stand</p>
                   <p class="pledge-amount">Pledge $75 or more</p>
                 </div>
-                <div class="radio-button" role="radio"></div>
+                <div class="radio-button" role="radio">
+                  <div class="selected-radio" style="display: none"></div>
+                </div>
               </header>
               <p class="pledge-perks">
                 You get a Black Special Edition computer stand and a personal
@@ -271,7 +277,7 @@
               </p>
             </div>
 
-            <div class="enter-pledge">
+            <div class="enter-pledge animation-target" style="display: none">
               <div class="pledge-container">
                 <p class="enter-your-pledge">Enter your pledge</p>
                 <div class="form-and-button">
@@ -291,7 +297,9 @@
                   <p class="pledge-name">Mahogany Special Edition</p>
                   <p class="pledge-amount">Pledge $200 or more</p>
                 </div>
-                <div class="radio-button" role="radio"></div>
+                <div class="radio-button" role="radio">
+                  <div class="selected-radio" style="display: none"></div>
+                </div>
               </header>
               <p class="pledge-perks">
                 You get two Special Edition Mahogany stands, a Backer T-Shirt,
@@ -303,7 +311,7 @@
               </p>
             </div>
 
-            <div class="enter-pledge">
+            <div class="enter-pledge animation-target" style="display: none">
               <div class="pledge-container">
                 <p class="enter-your-pledge">Enter your pledge</p>
                 <div class="form-and-button">
@@ -349,5 +357,7 @@
         <button class="got-it-btn">Got it!</button>
       </div>
     </div>
+
+    <script src="index.js"></script>
   </body>
 </html>
